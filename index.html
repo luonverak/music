@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="shortcut icon" href="image/music.png" type="image/x-icon">
+    <link rel="stylesheet" href="app.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="head-on">
+            <div class="box1">
+                <img src="image/music.png" alt="">
+            </div>
+            <div class="box2">
+                <div class="playlist">
+                    <p>Playlist</p>
+                </div>
+                <div class="liked-song">
+                    <h1>Liked Song</h1>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-light px-4 float-end dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Custom order
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" id="none">None</a></li>
+                <li><a class="dropdown-item" id="date">Date</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="list-song">
+            <table id="myTable" class="table align-middle" >
+                <thead>
+                    <tr>
+                        <th width="50px">#</th>
+                        <th width="120px">Title</th>
+                        <th></th>
+                        <th >Date</th>
+                        <th><i class="fa-regular fa-clock"></i></th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr id="btn_play">
+                        <td>1</td>
+                        <td>
+                            <img src="image/banner_vd.png" height="100px" style="object-fit: cover;" width="100px"
+                                alt="">
+                        </td>
+                        <td>
+                            Time to Rise by Mann Vanda
+                        </td>
+                        <td>2 years ago</td>
+                        <td>5:00</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="playing-song">
+            <div class="thumnail">
+                <img id="music_thumbnail" src="image/music.png" height="100px" style="object-fit: cover;" width="100px" alt="">
+            </div>
+            <div class="title">
+                <p id="songTitle">Song Title</p>
+            </div>
+            <div class="controller">
+                <button id="backButton"><i class="fa-solid fa-backward-step"></i></button>
+                <audio id="audioPlayer" autoplay preload="metadata" src="${audio}" controls></audio>
+                <button id="nextButton"><i class="fa-solid fa-forward-step"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
